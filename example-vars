@@ -3,6 +3,6 @@ export RELEASE_ROOT="user@server:/path"
 # location of Syncthing secret EC key
 export PRIVATE_KEY="~/secret/key.priv"
 # GitHub token for uploads
-export GITHUB_TOKEN="abcdef0123456789abcdef0123456789abcdef01"
+export GITHUB_TOKEN="53a05bb844f9fd92820f024912e41f47de11288f"
 # "rsh" command for rsync
 export RSYNC_RSH_CMD="ssh -p 2443"
