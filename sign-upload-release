@@ -29,11 +29,11 @@ done
 for f in *.zip; do
 	base="${f%.zip}"
 	unzip -q "$f"
-	if [ -f "$base/syncthing.exe" ] ; then
+	if [ -f "$base/mujocloud.exe" ] ; then
 		echo Signing "$base"
 		mkdir "$base/metadata"
-		stsigtool sign "$PRIVATE_KEY" "$base/syncthing.exe" > "$base/syncthing.exe.sig"
-		( echo "$f"; cat "$base/syncthing.exe" ) | stsigtool sign "$PRIVATE_KEY" > "$base/metadata/release.sig"
+		stsigtool sign "$PRIVATE_KEY" "$base/mujocloud.exe" > "$base/mujocloud.exe.sig"
+		( echo "$f"; cat "$base/mujocloud.exe" ) | stsigtool sign "$PRIVATE_KEY" > "$base/metadata/release.sig"
 		rm -f "$f"
 		zip -q -r "$f" "$base"
 		rm -rf "$base"
